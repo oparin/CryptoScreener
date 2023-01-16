@@ -154,7 +154,20 @@
 </template>
 
 <script>
+import jQuery from "jquery";
+const $ = jQuery;
+window.$ = $;
+
 export default {
+  mounted(){
+    $("#close-sidebar").click(function() {
+      $(".page-wrapper").removeClass("toggled");
+    });
+    $("#show-sidebar").click(function() {
+      $(".page-wrapper").addClass("toggled");
+    });
+
+  },
   data: ()=> {
     return{ count:0
     }
@@ -252,13 +265,14 @@ body {
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled .page-content {
     padding-left: 300px;
+    margin-top: 40px;
   }
 }
 /*----------------show sidebar button----------------*/
 #show-sidebar {
   position: fixed;
   left: 0;
-  top: 10px;
+  top: 60px;
   border-radius: 0 4px 4px 0px;
   width: 35px;
   transition-delay: 0.3s;
@@ -529,6 +543,7 @@ body {
 
 .page-wrapper .page-content {
   overflow-x: hidden;
+  margin-top: 40px;
 }
 
 /*------scroll bar---------------------*/

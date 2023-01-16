@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <nav class="navbar navbar-expand navbar-dark bg-dark header-menu-fixed">
     <router-link to="/" class="navbar-brand">CryptoScreener</router-link>
     <div class="navbar-nav mr-auto">
       <li class="nav-item">
@@ -34,5 +34,10 @@ export default {
   /*text-align: center;*/
   /*color: #2c3e50;*/
   margin-top: 0px;
+}
+.header-menu-fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
 }
 </style>
