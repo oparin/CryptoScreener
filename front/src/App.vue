@@ -16,7 +16,7 @@
 
 <script>
 
-import CryptoList from './components/CryptoList';
+import CryptoList from './components/cryptolist/CryptoList';
 
 export default {
   name: 'App',

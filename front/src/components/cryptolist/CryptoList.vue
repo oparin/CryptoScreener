@@ -32,24 +32,34 @@
               <span>Binance</span>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-book"></i>
-                <span>BTC/USDT</span>
-                <span class="badge badge-pill badge-primary">Beta</span>
-              </a>
+              <div class="crypto-list-item">
+                <TitleItem/>
+                <BookMark/>
+              </div>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-calendar"></i>
-                <span>ETH/USDT</span>
-                <span class="badge"><fa icon="bookmark"/></span>
-              </a>
+              <div class="crypto-list-item">
+                <TitleItem/>
+                <BookMark/>
+              </div>
             </li>
             <li>
-              <a href="#">
-                <i class="fa fa-folder"></i>
-                <span>Examples</span>
-              </a>
+              <div class="crypto-list-item">
+                <TitleItem/>
+                <BookMark/>
+              </div>
+            </li>
+            <li>
+              <div class="crypto-list-item">
+                <TitleItem/>
+                <BookMark/>
+              </div>
+            </li>
+            <li>
+              <div class="crypto-list-item">
+                <TitleItem/>
+                <BookMark/>
+              </div>
             </li>
           </ul>
         </div>
@@ -157,7 +167,8 @@
 import jQuery from "jquery";
 const $ = jQuery;
 window.$ = $;
-
+import BookMark from './BookMark';
+import TitleItem from './TitleItem';
 export default {
   mounted(){
     $("#close-sidebar").click(function() {
@@ -172,6 +183,10 @@ export default {
     return{ count:0
     }
   },
+  components: {
+    TitleItem,
+    BookMark,
+  }
 }
 </script>
 
@@ -398,11 +413,11 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu ul li a {
-  display: inline-block;
+  /*display: inline-block;*/
   width: 100%;
   text-decoration: none;
   position: relative;
-  padding: 8px 30px 8px 20px;
+  padding: 8px 30px 8px 30px;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a i {
@@ -658,6 +673,14 @@ body {
 
 .chiller-theme .sidebar-footer>a:last-child {
   border-right: none;
+}
+
+.crypto-list-item {
+  color: #818896;
+  height: 25px;
+}
+.crypto-list-item:hover {
+  color: #b8bfce;
 }
 
 </style>
